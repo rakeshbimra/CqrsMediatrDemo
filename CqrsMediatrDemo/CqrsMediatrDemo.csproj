@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="mediatr" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CqrsMediatrDemo.Commands\CqrsMediatrDemo.Commands.csproj" />
+    <ProjectReference Include="..\CqrsMediatrDemo.Domain\CqrsMediatrDemo.Domain.csproj" />
+    <ProjectReference Include="..\CqrsMediatrDemo.Queries\CqrsMediatrDemo.Queries.csproj" />
+  </ItemGroup>
+
+</Project>
